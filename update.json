@@ -1,18 +1,19 @@
 {
   "latest": "0.1.0",
-  "buildCode": 1,
-  "publishedAt": "2026-06-07",
-  "notes": "Première version livrée.\n\n## Ajouts\n- App .NET MAUI Blazor Hybrid (Android + Windows).\n- Authentification : email/mot de passe + Google OAuth (PKCE).\n- Persistance Turso : joueurs, jeux, sessions, scores.\n- Gestion des joueurs (CRUD, fusion, rattachement compte).\n- Gestion des jeux (CRUD, notice, marquage implémenté).\n- Compteur générique configurable.\n- Yams complet (totaux, prime 35).\n- Belote FFB (équipes drag&drop, belote/dix-de-der, capot, litige carry-over, arrondi, édition donne).\n- Historique des parties avec reprise/rejoue.\n- Thème éditorial sombre/clair.\n- Mobile-first.\n\n## Corrections\n- CLR 0x80131506 sur sérialisation JSON d'enums → JsonStringEnumConverter posé.\n- Bonus litige attribué au bon camp (capot défense, chute, normal).",
+  "buildCode": 3384021,
+  "publishedAt": "2026-06-08",
+  "notes": "Première version livrée, tous périmètres.\n\n### Ajouts\n- App .NET MAUI Blazor Hybrid (Android + Windows).\n- Authentification : email/mot de passe + Google OAuth (PKCE, loopback desktop, WebAuthenticator Android).\n- Persistance Turso (libSQL via HTTP) : utilisateurs, joueurs, jeux, sessions, scores.\n- Gestion des joueurs : CRUD, fusion de doublons, rattachement à un compte.\n- Gestion des jeux : CRUD, notice, marquage *implémenté / générique*.\n- **Compteur générique** : configurable (mode manche / cumul, score cible, joueurs).\n- **Yams** : feuille complète, totaux automatiques, prime de 35.\n- **Belote (FFB)** :\n  - Mise en équipes par drag & drop (Nous / Eux).\n  - Saisie par donne avec preneur + capot.\n  - Belote et dix-de-der : inclus dans la saisie ou +bonus, exclusifs entre équipes.\n  - Validation des chiffres (162 cartes + capot 252).\n  - Litige (égalité parfaite) : carry-over des points du preneur au prochain gagnant.\n  - Arrondi à la dizaine optionnel.\n  - Édition d'une donne enregistrée a posteriori.\n- Historique des parties avec reprise / rejoue.\n- Thème éditorial (sombre par défaut + clair sépia, toggle persistant).\n- Mobile-first : tap targets ≥ 44px, modales slide-up, nav bottom-bar.\n\n### Corrections notables\n- CLR 0x80131506 sur la sérialisation JSON d'enums (.NET 10) → `JsonStringEnumConverter` posé sur `BeloteTeam`, `BeloteAtout`, `BonusMode`.\n- Litige multi-cas : capot par la défense, chute, normal — le bonus est désormais attribué au bon camp.\n- Statut de la donne (texte coupé en flex) → bloc lisible avec puces.",
   "platforms": {
     "android": {
       "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.1.0/ScoreCounter-android-v0.1.0.apk",
-      "sha256": "",
-      "size": 0
+      "sha256": "f31056ba938830ac2986f126518bfac0cb768771e76277d4e51852fba8a0e842",
+      "size": 45065867
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.1.0/ScoreCounter-win-x64-v0.1.0.zip",
-      "sha256": "",
-      "size": 0
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.1.0/ScoreCounter-setup-v0.1.0.exe",
+      "sha256": "15a4d9f257a15f6be3824d3644a0b0110a5517e0398f68d39fd9b79d33df2756",
+      "size": 54221634,
+      "type": "inno-setup"
     }
   }
 }
