@@ -1,0 +1,18 @@
+{
+  "latest": "0.1.0",
+  "buildCode": 1,
+  "publishedAt": "2026-06-07",
+  "notes": "Première version livrée.\n\n## Ajouts\n- App .NET MAUI Blazor Hybrid (Android + Windows).\n- Authentification : email/mot de passe + Google OAuth (PKCE).\n- Persistance Turso : joueurs, jeux, sessions, scores.\n- Gestion des joueurs (CRUD, fusion, rattachement compte).\n- Gestion des jeux (CRUD, notice, marquage implémenté).\n- Compteur générique configurable.\n- Yams complet (totaux, prime 35).\n- Belote FFB (équipes drag&drop, belote/dix-de-der, capot, litige carry-over, arrondi, édition donne).\n- Historique des parties avec reprise/rejoue.\n- Thème éditorial sombre/clair.\n- Mobile-first.\n\n## Corrections\n- CLR 0x80131506 sur sérialisation JSON d'enums → JsonStringEnumConverter posé.\n- Bonus litige attribué au bon camp (capot défense, chute, normal).",
+  "platforms": {
+    "android": {
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.1.0/ScoreCounter-android-v0.1.0.apk",
+      "sha256": "",
+      "size": 0
+    },
+    "windows": {
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.1.0/ScoreCounter-win-x64-v0.1.0.zip",
+      "sha256": "",
+      "size": 0
+    }
+  }
+}
