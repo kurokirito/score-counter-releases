@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.1",
-  "buildCode": 3403909,
+  "latest": "0.2.2",
+  "buildCode": 3403914,
   "publishedAt": "2026-06-21",
-  "notes": "### Corrections\n- **Android : Google sign-in crashait** avec \"You must subclass the WebAuthenticatorCallbackActivity…\".\n  Ajout de la classe `WebAuthenticationCallbackActivity` avec l'IntentFilter qui matche\n  le scheme reverse-client-id Google (`com.googleusercontent.apps.…`). Le callback OAuth\n  est maintenant routé correctement vers WebAuthenticator.",
+  "notes": "### Ajouts\n- **Banner de mise à jour visible aussi sur l'écran de login** — utile quand une\n  nouvelle version corrige justement le système d'authentification (cas v0.2.1\n  pour Google OAuth sur Android). Le bouton \"Mettre à jour\" navigue vers la page\n  À propos qui marche sans login.",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.1/ScoreCounter-android-v0.2.1.apk",
-      "sha256": "186ea64e33ab97483551d5da24c0d9f4fe02ce6ee69a89aa2b24a0afdde7e8e4",
-      "size": 48708729
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.2/ScoreCounter-android-v0.2.2.apk",
+      "sha256": "543cebaadec67ab18af8135981abd4eb0450a8d547e9e683eecc8eea05825309",
+      "size": 49047571
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.1/ScoreCounter-setup-v0.2.1.exe",
-      "sha256": "2960b950de3409e16680291277aeec0a6f2a66d12ba1de4fb1ce774460c1e090",
-      "size": 58117059,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.2/ScoreCounter-setup-v0.2.2.exe",
+      "sha256": "eb55da20f8c98593959c020fdcae42c0ce8dd22920f71fa585018eeb6a588460",
+      "size": 58087510,
       "type": "inno-setup"
     }
   }
