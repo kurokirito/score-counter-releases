@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.2",
-  "buildCode": 3403914,
+  "latest": "0.2.3",
+  "buildCode": 3403930,
   "publishedAt": "2026-06-21",
-  "notes": "### Ajouts\n- **Banner de mise à jour visible aussi sur l'écran de login** — utile quand une\n  nouvelle version corrige justement le système d'authentification (cas v0.2.1\n  pour Google OAuth sur Android). Le bouton \"Mettre à jour\" navigue vers la page\n  À propos qui marche sans login.",
+  "notes": "### Corrections\n- **Tables** : le wrap `.play-table-wrap` perd son `padding: 4px` qui créait l'effet \"carré à l'intérieur des bords arrondis\". Le tableau touche maintenant les bords du wrap, les coins arrondis le clippent proprement grâce à `overflow-x: auto`.\n- **Sticky 1ère colonne** : les cellules ne sont plus visibles à travers la colonne sticky-left quand on scrolle horizontalement le tableau. Les fonds translucides (hover, ligne en cours d'édition, litige) sont maintenant superposés sur une couche opaque `var(--bg-1)` via `background-color` + `background-image: linear-gradient(...)`. Plus de bleed-through visuel.",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.2/ScoreCounter-android-v0.2.2.apk",
-      "sha256": "543cebaadec67ab18af8135981abd4eb0450a8d547e9e683eecc8eea05825309",
-      "size": 49047571
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.3/ScoreCounter-android-v0.2.3.apk",
+      "sha256": "5446d86714a09be99357f05507aa13938402575be8983b678dd01cec517c68cf",
+      "size": 48708729
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.2/ScoreCounter-setup-v0.2.2.exe",
-      "sha256": "eb55da20f8c98593959c020fdcae42c0ce8dd22920f71fa585018eeb6a588460",
-      "size": 58087510,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.3/ScoreCounter-setup-v0.2.3.exe",
+      "sha256": "e78b0e1a1623a51c922f3f4b3748976b6c8835ad64e91b3f2b8b656ca3d7fdbc",
+      "size": 58073439,
       "type": "inno-setup"
     }
   }
