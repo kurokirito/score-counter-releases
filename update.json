@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.4",
-  "buildCode": 3403969,
+  "latest": "0.2.5",
+  "buildCode": 3403988,
   "publishedAt": "2026-06-21",
-  "notes": "### Ajouts\n- **Compteur générique : boutons d'action dans le tableau** — en vue 📋 Tableau, les boutons `◀ / Nouvelle manche ▶ / 📊 / Terminer` sont maintenant intégrés en `<tfoot>` sticky-bottom (comme pour Belote). Plus de footer flottant qui mange de l'espace.\n- **Safe-area Android** : la topbar respecte `env(safe-area-inset-top)` pour ne pas passer sous la barre d'état système (edge-to-edge sur Android 15+).\n\n### Refonte des dialogues\n- **Remplacement des popups système** (`confirm` / `prompt` JS natifs) par des **modales custom in-app** cohérentes avec le thème Editorial card table.\n- Nouveau `DialogService` (Confirm / Prompt / Toast) + composant `AppDialogs` monté globalement dans MainLayout.\n- Migration des **15 call-sites** : supprimer partie, supprimer donne, supprimer joueur, supprimer jeu, terminer partie, manche incomplète, saisie de score (manche / cellule / libre).\n- Bouton **rouge danger** automatique quand l'action est destructive (supprimer / terminer).\n- Saisies de score : `inputMode=\"numeric\"` (clavier numérique mobile) + focus auto + **Enter pour valider** / **Échap pour annuler** + fermeture au tap backdrop.\n- Système de toasts non-bloquants prêt à l'emploi (`Dialogs.ShowToast(message, kind)`) — pas encore utilisé, dispo pour les confirmations légères futures (« score enregistré », erreurs réseau, etc.).",
+  "notes": "### Corrections\n- **Numéro de version affiché en littéral** dans le banner d'update et la page À propos (`v@u.Latest` apparaissait au lieu de `v0.2.5`). Razor détectait le pattern `lettre@lettre` comme une adresse email et ne l'interpolait pas. Fix avec `v@(u.Latest)` (expression explicite).",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.4/ScoreCounter-android-v0.2.4.apk",
-      "sha256": "1d9396b18bbb849c31ddbeca7547486f64890c1785f922c5251e45790db0ef5b",
-      "size": 49080339
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.5/ScoreCounter-android-v0.2.5.apk",
+      "sha256": "8f91886bd6ce07c2f30846d5dcd86c6f807f2d8f4fa5388d8f759c932a87e62d",
+      "size": 48745593
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.4/ScoreCounter-setup-v0.2.4.exe",
-      "sha256": "9c275c0efb222c40d750cb5800b4465bc739b2c66c0ccfa0e565425801e15609",
-      "size": 58115349,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.5/ScoreCounter-setup-v0.2.5.exe",
+      "sha256": "86d64d99adc7fe039c91777f3c01e978d55c20acee96230739c251e9ef9c9075",
+      "size": 58090612,
       "type": "inno-setup"
     }
   }
