@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.3",
-  "buildCode": 3403930,
+  "latest": "0.2.4",
+  "buildCode": 3403969,
   "publishedAt": "2026-06-21",
-  "notes": "### Corrections\n- **Tables** : le wrap `.play-table-wrap` perd son `padding: 4px` qui créait l'effet \"carré à l'intérieur des bords arrondis\". Le tableau touche maintenant les bords du wrap, les coins arrondis le clippent proprement grâce à `overflow-x: auto`.\n- **Sticky 1ère colonne** : les cellules ne sont plus visibles à travers la colonne sticky-left quand on scrolle horizontalement le tableau. Les fonds translucides (hover, ligne en cours d'édition, litige) sont maintenant superposés sur une couche opaque `var(--bg-1)` via `background-color` + `background-image: linear-gradient(...)`. Plus de bleed-through visuel.",
+  "notes": "### Ajouts\n- **Compteur générique : boutons d'action dans le tableau** — en vue 📋 Tableau, les boutons `◀ / Nouvelle manche ▶ / 📊 / Terminer` sont maintenant intégrés en `<tfoot>` sticky-bottom (comme pour Belote). Plus de footer flottant qui mange de l'espace.\n- **Safe-area Android** : la topbar respecte `env(safe-area-inset-top)` pour ne pas passer sous la barre d'état système (edge-to-edge sur Android 15+).\n\n### Refonte des dialogues\n- **Remplacement des popups système** (`confirm` / `prompt` JS natifs) par des **modales custom in-app** cohérentes avec le thème Editorial card table.\n- Nouveau `DialogService` (Confirm / Prompt / Toast) + composant `AppDialogs` monté globalement dans MainLayout.\n- Migration des **15 call-sites** : supprimer partie, supprimer donne, supprimer joueur, supprimer jeu, terminer partie, manche incomplète, saisie de score (manche / cellule / libre).\n- Bouton **rouge danger** automatique quand l'action est destructive (supprimer / terminer).\n- Saisies de score : `inputMode=\"numeric\"` (clavier numérique mobile) + focus auto + **Enter pour valider** / **Échap pour annuler** + fermeture au tap backdrop.\n- Système de toasts non-bloquants prêt à l'emploi (`Dialogs.ShowToast(message, kind)`) — pas encore utilisé, dispo pour les confirmations légères futures (« score enregistré », erreurs réseau, etc.).",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.3/ScoreCounter-android-v0.2.3.apk",
-      "sha256": "5446d86714a09be99357f05507aa13938402575be8983b678dd01cec517c68cf",
-      "size": 48708729
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.4/ScoreCounter-android-v0.2.4.apk",
+      "sha256": "1d9396b18bbb849c31ddbeca7547486f64890c1785f922c5251e45790db0ef5b",
+      "size": 49080339
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.3/ScoreCounter-setup-v0.2.3.exe",
-      "sha256": "e78b0e1a1623a51c922f3f4b3748976b6c8835ad64e91b3f2b8b656ca3d7fdbc",
-      "size": 58073439,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.4/ScoreCounter-setup-v0.2.4.exe",
+      "sha256": "9c275c0efb222c40d750cb5800b4465bc739b2c66c0ccfa0e565425801e15609",
+      "size": 58115349,
       "type": "inno-setup"
     }
   }
