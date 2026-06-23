@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.10",
-  "buildCode": 3406713,
+  "latest": "0.2.11",
+  "buildCode": 3406740,
   "publishedAt": "2026-06-23",
-  "notes": "### Documentation\n- **Règles complètes de la Belote** : `Games/Belote/RULES.md` enrichi avec le règlement officiel FFB intégral (matériel, distribution en 2 temps, la prise au premier puis second tour, règles de jeu de la carte — fournir, couper, monter à l'atout —, remport du pli, annonce belote/rebelote). Les sections scoring (cartes, capot, chute, litige, arrondi) restent comme avant. Affichées via le bouton « 📖 Règles » dans une partie Belote ou depuis la carte du jeu.",
+  "notes": "### Ajouts\n- **Nouveau jeu : 7 de Carreau** ♦. Jeu de 52 cartes à partir de 3 joueurs où on construit autour des 7 (les carreaux d'abord) et on cherche à écouler ses cartes le premier. À la fin d'une manche, chaque joueur compte les cartes restantes en main (As = 25, R/D/V = 15, numérotées = face). Le score le plus bas après le nombre de manches convenu gagne. Utilise le moteur générique avec defaults pré-remplis (plus petit gagne, chacun pour soi, suivi des manches). Le nombre de manches reste libre. Règles complètes accessibles via le bouton « 📖 Règles ».\n\n### Améliorations\n- **Setup** : verrous granulaires sur les options selon le jeu choisi. Avant, c'était tout-ou-rien : un jeu imposait *toutes* ses règles (Five Crowns). Maintenant chaque option (composition, vainqueur, fin de partie, suivi des manches) peut être verrouillée indépendamment. Permet par exemple au 7 de carreau de fixer le mode et le sens de victoire tout en laissant l'utilisateur choisir le nombre de manches.\n- Le bouton « 📖 Règles » dans une partie de Tarot fonctionne désormais (était une omission).",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.10/ScoreCounter-android-v0.2.10.apk",
-      "sha256": "e9dc7dd69a049f8643a0d9225e62f45e0b8627d2d5622b9d02e4bfc76c9769c0",
-      "size": 48745660
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.11/ScoreCounter-android-v0.2.11.apk",
+      "sha256": "6cabb40fb10cb03cf5c28047d3bd6ba80b92200e9325955c6394c0a7d0cb9c7b",
+      "size": 49088671
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.10/ScoreCounter-setup-v0.2.10.exe",
-      "sha256": "6feb85b2dc6950801b4307ec4f8f8ab8a6764d90ce2ac54822d3933be70ee8f5",
-      "size": 58745413,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.11/ScoreCounter-setup-v0.2.11.exe",
+      "sha256": "ca24225205e30080f50fc339167de54bcc18c56650fd763560cae4810ccfd459",
+      "size": 58798205,
       "type": "inno-setup"
     }
   }
