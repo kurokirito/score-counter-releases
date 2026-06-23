@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.11",
-  "buildCode": 3406740,
+  "latest": "0.2.12",
+  "buildCode": 3406763,
   "publishedAt": "2026-06-23",
-  "notes": "### Ajouts\n- **Nouveau jeu : 7 de Carreau** ♦. Jeu de 52 cartes à partir de 3 joueurs où on construit autour des 7 (les carreaux d'abord) et on cherche à écouler ses cartes le premier. À la fin d'une manche, chaque joueur compte les cartes restantes en main (As = 25, R/D/V = 15, numérotées = face). Le score le plus bas après le nombre de manches convenu gagne. Utilise le moteur générique avec defaults pré-remplis (plus petit gagne, chacun pour soi, suivi des manches). Le nombre de manches reste libre. Règles complètes accessibles via le bouton « 📖 Règles ».\n\n### Améliorations\n- **Setup** : verrous granulaires sur les options selon le jeu choisi. Avant, c'était tout-ou-rien : un jeu imposait *toutes* ses règles (Five Crowns). Maintenant chaque option (composition, vainqueur, fin de partie, suivi des manches) peut être verrouillée indépendamment. Permet par exemple au 7 de carreau de fixer le mode et le sens de victoire tout en laissant l'utilisateur choisir le nombre de manches.\n- Le bouton « 📖 Règles » dans une partie de Tarot fonctionne désormais (était une omission).",
+  "notes": "### Corrections\n- **Android : bouton retour sur la page Règles** — l'ancien fix (v0.2.9) utilisait `WebView.CanGoBack()`, qui ne fonctionne PAS avec Blazor : Blazor utilise `history.pushState()` pour sa navigation, ce qui peuple `window.history` mais pas la history native Android (basée sur les chargements de pages). Donc `CanGoBack()` retournait quasi toujours false et l'app se fermait au premier appui. Remplacement par un compteur JS (`window._scBackDepth`) qui s'incrémente sur chaque pushState et se décrémente sur popstate. `MainActivity.OnBackPressed` appelle `window.scHandleAndroidBack()` via EvaluateJavascript ; s'il retourne true, on consomme ; sinon on quitte (Finish).\n- **Page Règles : listes numérotées affichées en bloc** — le mini parser markdown de `Rules.razor` ne connaissait que les listes à puces (`- `, `* `). Les `1. … 2. … 3. …` du déroulement du jeu du 7 de Carreau étaient rendus comme un seul paragraphe compact sans retour à la ligne. Ajout du support des listes numérotées `<ol>` (regex `^\\d+\\.\\s`), avec basculement propre entre `<ul>`, `<ol>` et paragraphe.",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.11/ScoreCounter-android-v0.2.11.apk",
-      "sha256": "6cabb40fb10cb03cf5c28047d3bd6ba80b92200e9325955c6394c0a7d0cb9c7b",
-      "size": 49088671
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.12/ScoreCounter-android-v0.2.12.apk",
+      "sha256": "319fc937b58decc856dc9aceff1e866caf2e37c77bfc6878023256565188d1cd",
+      "size": 48758021
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.11/ScoreCounter-setup-v0.2.11.exe",
-      "sha256": "ca24225205e30080f50fc339167de54bcc18c56650fd763560cae4810ccfd459",
-      "size": 58798205,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.12/ScoreCounter-setup-v0.2.12.exe",
+      "sha256": "e6b8899b91432e006ab1ae70e14f744c9bbb9bc2daa2052ed161957d0135ef75",
+      "size": 58756539,
       "type": "inno-setup"
     }
   }
