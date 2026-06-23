@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.12",
-  "buildCode": 3406763,
+  "latest": "0.2.13",
+  "buildCode": 3406793,
   "publishedAt": "2026-06-23",
-  "notes": "### Corrections\n- **Android : bouton retour sur la page Règles** — l'ancien fix (v0.2.9) utilisait `WebView.CanGoBack()`, qui ne fonctionne PAS avec Blazor : Blazor utilise `history.pushState()` pour sa navigation, ce qui peuple `window.history` mais pas la history native Android (basée sur les chargements de pages). Donc `CanGoBack()` retournait quasi toujours false et l'app se fermait au premier appui. Remplacement par un compteur JS (`window._scBackDepth`) qui s'incrémente sur chaque pushState et se décrémente sur popstate. `MainActivity.OnBackPressed` appelle `window.scHandleAndroidBack()` via EvaluateJavascript ; s'il retourne true, on consomme ; sinon on quitte (Finish).\n- **Page Règles : listes numérotées affichées en bloc** — le mini parser markdown de `Rules.razor` ne connaissait que les listes à puces (`- `, `* `). Les `1. … 2. … 3. …` du déroulement du jeu du 7 de Carreau étaient rendus comme un seul paragraphe compact sans retour à la ligne. Ajout du support des listes numérotées `<ol>` (regex `^\\d+\\.\\s`), avec basculement propre entre `<ul>`, `<ol>` et paragraphe.",
+  "notes": "### Améliorations\n- **Five Crowns : nombre de cartes affiché dans le tableau** — la colonne « Manche » indique maintenant entre parenthèses le nombre de cartes distribuées à chaque manche (qui correspond aussi à la valeur de la carte sauvage). Standard : « 1 (3) », « 2 (4) », …, « 11 (13) ». Express : « 1 (8) », …, « 6 (13) ». Visible dans le tableau de la partie en cours et dans le récap final.",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.12/ScoreCounter-android-v0.2.12.apk",
-      "sha256": "319fc937b58decc856dc9aceff1e866caf2e37c77bfc6878023256565188d1cd",
-      "size": 48758021
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.13/ScoreCounter-android-v0.2.13.apk",
+      "sha256": "fb339eb637a3ea70d21ae270d1ff671a4d58a574d3d500c77d727de295943779",
+      "size": 49096863
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.12/ScoreCounter-setup-v0.2.12.exe",
-      "sha256": "e6b8899b91432e006ab1ae70e14f744c9bbb9bc2daa2052ed161957d0135ef75",
-      "size": 58756539,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.13/ScoreCounter-setup-v0.2.13.exe",
+      "sha256": "3e2dc8aef1745a159ced1045d4d087b41afc1d827f040532ede611d24694e676",
+      "size": 58776220,
       "type": "inno-setup"
     }
   }
