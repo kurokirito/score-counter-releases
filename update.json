@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.9",
-  "buildCode": 3406654,
+  "latest": "0.2.10",
+  "buildCode": 3406713,
   "publishedAt": "2026-06-23",
-  "notes": "### Corrections\n- **Android : bouton retour système** — au lieu de fermer l'application brutalement, déroule désormais l'historique de navigation Blazor (équivalent du back navigateur). Implémenté via `MainActivity.OnBackPressed` qui trouve la WebView dans la hiérarchie de vues et appelle `GoBack()` si `CanGoBack()`. Quand il n'y a plus rien à dérouler (page d'accueil), comportement par défaut Android (ferme l'app).",
+  "notes": "### Documentation\n- **Règles complètes de la Belote** : `Games/Belote/RULES.md` enrichi avec le règlement officiel FFB intégral (matériel, distribution en 2 temps, la prise au premier puis second tour, règles de jeu de la carte — fournir, couper, monter à l'atout —, remport du pli, annonce belote/rebelote). Les sections scoring (cartes, capot, chute, litige, arrondi) restent comme avant. Affichées via le bouton « 📖 Règles » dans une partie Belote ou depuis la carte du jeu.",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.9/ScoreCounter-android-v0.2.9.apk",
-      "sha256": "78475da632feb5bea5feec92de0d063412cb9a1b08aa4d825e2763a561b3d909",
-      "size": 49084502
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.10/ScoreCounter-android-v0.2.10.apk",
+      "sha256": "e9dc7dd69a049f8643a0d9225e62f45e0b8627d2d5622b9d02e4bfc76c9769c0",
+      "size": 48745660
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.9/ScoreCounter-setup-v0.2.9.exe",
-      "sha256": "2457655fe2648aa3a7d1db7f1cb3d95e21abd300a20468941742b7ceb91604d4",
-      "size": 58777284,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.10/ScoreCounter-setup-v0.2.10.exe",
+      "sha256": "6feb85b2dc6950801b4307ec4f8f8ab8a6764d90ce2ac54822d3933be70ee8f5",
+      "size": 58745413,
       "type": "inno-setup"
     }
   }
