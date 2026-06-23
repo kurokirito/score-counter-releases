@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.8",
-  "buildCode": 3406629,
+  "latest": "0.2.9",
+  "buildCode": 3406654,
   "publishedAt": "2026-06-23",
-  "notes": "### Corrections\n- **Android : page Règles vide** — la découverte des pages PDF officielles utilisait des requêtes HTTP HEAD via `HttpClient`, qui ne sont pas interceptées par le BlazorWebView Android (contrairement à Windows WebView2). Remplacement par un lookup hardcodé `KnownPageCount` qui liste les pages dispos par slug. Markdown chargé via `FileSystem.OpenAppPackageFileAsync` (marche sur les 2 plateformes).\n- Slug normalisé en lowercase pour le nom du MauiAsset (Android est case-sensitive sur les noms de fichiers).\n- Message d'erreur explicite si le markdown ne charge pas.\n\n### Polish\n- **CHANGELOG.md** : ordre inversé — versions les plus récentes en haut (cohérent Keep a Changelog).",
+  "notes": "### Corrections\n- **Android : bouton retour système** — au lieu de fermer l'application brutalement, déroule désormais l'historique de navigation Blazor (équivalent du back navigateur). Implémenté via `MainActivity.OnBackPressed` qui trouve la WebView dans la hiérarchie de vues et appelle `GoBack()` si `CanGoBack()`. Quand il n'y a plus rien à dérouler (page d'accueil), comportement par défaut Android (ferme l'app).",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.8/ScoreCounter-android-v0.2.8.apk",
-      "sha256": "2574cb982f91210039a684052573e5fed7b970744dcca471205adb069044d07a",
-      "size": 48741564
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.9/ScoreCounter-android-v0.2.9.apk",
+      "sha256": "78475da632feb5bea5feec92de0d063412cb9a1b08aa4d825e2763a561b3d909",
+      "size": 49084502
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.8/ScoreCounter-setup-v0.2.8.exe",
-      "sha256": "788f408a7e92387ac0cf351a77469284bf424508b7d5a96cee975fad6aedb670",
-      "size": 58754194,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.9/ScoreCounter-setup-v0.2.9.exe",
+      "sha256": "2457655fe2648aa3a7d1db7f1cb3d95e21abd300a20468941742b7ceb91604d4",
+      "size": 58777284,
       "type": "inno-setup"
     }
   }
