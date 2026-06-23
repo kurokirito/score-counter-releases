@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.13",
-  "buildCode": 3406793,
+  "latest": "0.2.14",
+  "buildCode": 3406797,
   "publishedAt": "2026-06-23",
-  "notes": "### Améliorations\n- **Five Crowns : nombre de cartes affiché dans le tableau** — la colonne « Manche » indique maintenant entre parenthèses le nombre de cartes distribuées à chaque manche (qui correspond aussi à la valeur de la carte sauvage). Standard : « 1 (3) », « 2 (4) », …, « 11 (13) ». Express : « 1 (8) », …, « 6 (13) ». Visible dans le tableau de la partie en cours et dans le récap final.",
+  "notes": "### Améliorations\n- **Five Crowns : nombre de cartes aussi dans le mode « Manche en cours »** — l'étiquette du score de la manche affiche désormais « Manche 1 (3) », « Manche 2 (4) »… en plus du tableau. Cohérent entre les deux vues.",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.13/ScoreCounter-android-v0.2.13.apk",
-      "sha256": "fb339eb637a3ea70d21ae270d1ff671a4d58a574d3d500c77d727de295943779",
-      "size": 49096863
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.14/ScoreCounter-android-v0.2.14.apk",
+      "sha256": "edd46e4e05086df1462535a0df2cc7e715d3ae7d5b843559af9710f391044575",
+      "size": 48758021
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.13/ScoreCounter-setup-v0.2.13.exe",
-      "sha256": "3e2dc8aef1745a159ced1045d4d087b41afc1d827f040532ede611d24694e676",
-      "size": 58776220,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.14/ScoreCounter-setup-v0.2.14.exe",
+      "sha256": "f7903112de4ffaa5a3c13e4b80dd0b4c8c76d1046329d87f2cdc8cdafd09dba5",
+      "size": 58787002,
       "type": "inno-setup"
     }
   }
