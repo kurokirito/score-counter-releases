@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.7",
-  "buildCode": 3404237,
-  "publishedAt": "2026-06-22",
-  "notes": "### Nouveau jeu : Tarot\n- 3, 4, 5 ou **6 joueurs** (à 6, un joueur est « mort » chaque donne et tourne automatiquement).\n- Saisie de donne : preneur, partenaire (à 5+ joueurs), contrat (Prise / Garde / Garde sans / Garde contre), bouts gagnés, points-cartes du preneur, primes (petit au bout, poignée simple/double/triple, chelem).\n- Calcul automatique de la répartition selon nombre de joueurs avec règles FFT (cible variable selon bouts, multiplicateur de contrat, primes fixes).\n- Preview du score dans la modal de saisie avant validation.\n- Édition de donne *a posteriori* par clic sur une ligne.\n- Icône 🎴 dans Jeux / Historique / pages de session.\n\n### Phase 3 mode équipe\n- Vue **📋 Tableau** : en mode équipe PerTeam, les colonnes sont les équipes (au lieu des joueurs), la valeur de la cellule = somme des joueurs de l'équipe pour cette manche.\n- **Modal Recap par manche** (📊) : idem, colonnes équipes en PerTeam.\n- **Recap final 🏆** : ranking par équipe avec membres listés en italique sous le nom.\n\n### Icône d'application custom\n- Remplacement de l'icône .NET violet par 4 symboles de cartes ♠♥♦♣ en or sur fond bleu-nuit.\n- Splash screen assorti.",
+  "latest": "0.2.8",
+  "buildCode": 3406629,
+  "publishedAt": "2026-06-23",
+  "notes": "### Corrections\n- **Android : page Règles vide** — la découverte des pages PDF officielles utilisait des requêtes HTTP HEAD via `HttpClient`, qui ne sont pas interceptées par le BlazorWebView Android (contrairement à Windows WebView2). Remplacement par un lookup hardcodé `KnownPageCount` qui liste les pages dispos par slug. Markdown chargé via `FileSystem.OpenAppPackageFileAsync` (marche sur les 2 plateformes).\n- Slug normalisé en lowercase pour le nom du MauiAsset (Android est case-sensitive sur les noms de fichiers).\n- Message d'erreur explicite si le markdown ne charge pas.\n\n### Polish\n- **CHANGELOG.md** : ordre inversé — versions les plus récentes en haut (cohérent Keep a Changelog).",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.7/ScoreCounter-android-v0.2.7.apk",
-      "sha256": "64bf965d0ff4b3fd751bf6dc1ab2b9452fff3f7ec9d6499c91b70c11b831dfa3",
-      "size": 49084502
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.8/ScoreCounter-android-v0.2.8.apk",
+      "sha256": "2574cb982f91210039a684052573e5fed7b970744dcca471205adb069044d07a",
+      "size": 48741564
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.7/ScoreCounter-setup-v0.2.7.exe",
-      "sha256": "6ba4d8286b63a6d897069f6e579136ed4da25b9596f4b28af1b5bbc769953bcf",
-      "size": 58759081,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.8/ScoreCounter-setup-v0.2.8.exe",
+      "sha256": "788f408a7e92387ac0cf351a77469284bf424508b7d5a96cee975fad6aedb670",
+      "size": 58754194,
       "type": "inno-setup"
     }
   }
