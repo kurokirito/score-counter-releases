@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.15",
-  "buildCode": 3406802,
-  "publishedAt": "2026-06-23",
-  "notes": "### Corrections\n- **Android : swipe-from-edge fermait l'app** — sur Android 13+ avec la gesture navigation, le swipe latéral déclenche `OnBackInvokedDispatcher` au lieu de `OnBackPressed`, donc l'override de v0.2.12 ne le captait pas et le swipe fermait l'app brutalement. Bascule vers `OnBackPressedDispatcher` (AndroidX) qui unifie bouton-retour legacy et swipe prédictif sur toutes les versions Android. Le callback `BlazorBackCallback` utilise la même logique JS qu'avant (compteur `_scBackDepth` + `history.back()`).",
+  "latest": "0.2.16",
+  "buildCode": 3444532,
+  "publishedAt": "2026-07-20",
+  "notes": "### Ajouts\n- **Accueil (`/` et `/home`) : parties en cours** — l'écran d'accueil liste maintenant tes parties en cours (créées par toi et non terminées) juste au-dessus des boutons « Nouvelle partie » / « Historique ». Salutation adaptée à l'heure (Bonjour / Bon après-midi / Bonsoir / Bonne nuit).\n- **Historique : toggle « Mes parties / Toutes »** — par défaut, seul l'historique de tes propres parties (créées via ton compte) est affiché. Toggle en haut de la page pour tout voir. Les compteurs entre parenthèses aident à choisir.\n\n### Améliorations\n- **Refonte de la carte d'une partie dans /history** :\n  - Poubelle discrète en haut à droite (visible uniquement pour le propriétaire de la partie)\n  - Bouton « 🔁 Rejouer » toujours présent en bas à droite (rematch avec les mêmes joueurs)\n  - **Toute la carte est cliquable** — clic direct pour reprendre une partie en cours ou revoir le récap d'une partie terminée\n  - Layout carte verticale plus lisible que l'ancienne ligne horizontale",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.15/ScoreCounter-android-v0.2.15.apk",
-      "sha256": "949683b755197e4cea347a59a21ce8f4fc0b4c0adeab8cd2c00b53957a19e151",
-      "size": 49096863
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.16/ScoreCounter-android-v0.2.16.apk",
+      "sha256": "b8833efa1fee71a7ecaf0933a8f407a09f7b08b00188e4f278b7c09f26046bd8",
+      "size": 49133727
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.15/ScoreCounter-setup-v0.2.15.exe",
-      "sha256": "94680035e29450575976ca1fb31b789eb6efd3b9f4ec3c43c2eeab6ca4f6e037",
-      "size": 58812506,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.16/ScoreCounter-setup-v0.2.16.exe",
+      "sha256": "f947fb0b65ef8818f132a01f008c4877b4fca1a8eb485156343dd5f91a16eb11",
+      "size": 58794564,
       "type": "inno-setup"
     }
   }
