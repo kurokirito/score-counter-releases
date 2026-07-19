@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.16",
-  "buildCode": 3444532,
+  "latest": "0.2.17",
+  "buildCode": 3444541,
   "publishedAt": "2026-07-20",
-  "notes": "### Ajouts\n- **Accueil (`/` et `/home`) : parties en cours** — l'écran d'accueil liste maintenant tes parties en cours (créées par toi et non terminées) juste au-dessus des boutons « Nouvelle partie » / « Historique ». Salutation adaptée à l'heure (Bonjour / Bon après-midi / Bonsoir / Bonne nuit).\n- **Historique : toggle « Mes parties / Toutes »** — par défaut, seul l'historique de tes propres parties (créées via ton compte) est affiché. Toggle en haut de la page pour tout voir. Les compteurs entre parenthèses aident à choisir.\n\n### Améliorations\n- **Refonte de la carte d'une partie dans /history** :\n  - Poubelle discrète en haut à droite (visible uniquement pour le propriétaire de la partie)\n  - Bouton « 🔁 Rejouer » toujours présent en bas à droite (rematch avec les mêmes joueurs)\n  - **Toute la carte est cliquable** — clic direct pour reprendre une partie en cours ou revoir le récap d'une partie terminée\n  - Layout carte verticale plus lisible que l'ancienne ligne horizontale",
+  "notes": "### Ajouts\n- **Groupes de joueurs** — nouvelle notion partagée entre tous les comptes (comme les joueurs). Section « Groupes » sur la page `/players` avec CRUD complet (nom, couleur, membres). Dans les setups de partie (générique, Yams, Belote, Tarot), une barre « Ajouter : [Famille] [Copains] [Boulot]… » permet de pré-remplir la sélection de joueurs en un clic. Additive (ne remplace pas les joueurs déjà sélectionnés) pour permettre de combiner plusieurs groupes. Belote : les 2 premiers joueurs du groupe vont en équipe 1, les 2 suivants en équipe 2.\n- **Refresh** :\n  - **Mobile : pull-to-refresh** — un drag vers le bas depuis le haut de la page (≥ 90 px) recharge la page courante. Indicateur 🔄 léger qui suit le doigt.\n  - **Desktop : clic sur la marque « 🎲 ScoreCounter »** de la sidebar recharge la page courante.\n  - Full reload (window.location.reload) — chaque page ré-exécute son chargement, l'auth persiste via SecureStorage.\n\n### Interne\n- Nouveau schéma Turso : tables `PlayerGroups` (Id, Uuid, Name, ColorHex, CreatedByUserId, CreatedAt + index unique sur Name) et `PlayerGroupMembers` (GroupId, PlayerId, Position).\n- CRUD complet dans `TursoService` : `GetPlayerGroupsAsync`, `AddPlayerGroupAsync`, `UpdatePlayerGroupAsync`, `DeletePlayerGroupAsync`.",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.16/ScoreCounter-android-v0.2.16.apk",
-      "sha256": "b8833efa1fee71a7ecaf0933a8f407a09f7b08b00188e4f278b7c09f26046bd8",
-      "size": 49133727
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.17/ScoreCounter-android-v0.2.17.apk",
+      "sha256": "5f6a04e13e550efb7416b164564ff209804e3d3038b8b6f0c31bb011d862b8e2",
+      "size": 48880901
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.16/ScoreCounter-setup-v0.2.16.exe",
-      "sha256": "f947fb0b65ef8818f132a01f008c4877b4fca1a8eb485156343dd5f91a16eb11",
-      "size": 58794564,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.17/ScoreCounter-setup-v0.2.17.exe",
+      "sha256": "8105710a1da5cd302e8057f38e760beb5f5c1561988d2c21d44b8b147b9d36d1",
+      "size": 58850527,
       "type": "inno-setup"
     }
   }
