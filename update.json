@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.20",
-  "buildCode": 3462469,
+  "latest": "0.2.21",
+  "buildCode": 3462488,
   "publishedAt": "2026-08-01",
-  "notes": "### Ajouts\n- **Entête flottante pour les tableaux de score** (`Yams`, PlaySession list view avec Five Crowns, etc.). Quand tu scrolles vers le bas et que l'entête (Case + noms + totaux) sort du viewport, un clone apparaît en `position:fixed` en haut de la zone de contenu, aligné avec le tableau sous-jacent. Suit aussi le scroll horizontal quand le tableau déborde (5+ joueurs sur écran étroit). Implémenté en JS pur car `overflow-x:auto` sur le wrap casserait `position:sticky` en CSS pur — trade-off entre scroll H et sticky V normalement incompatibles.\n\n### Interne\n- Nouveau module JS `window.scStickyHeaders` dans `wwwroot/index.html` : `MutationObserver` sur `document.body` pour capter les tableaux ajoutés au vol par Blazor, clone du `<thead>` dans un overlay hors du wrap, `requestAnimationFrame` throttling sur les scroll events, sync des largeurs de colonnes via `getBoundingClientRect`, purge automatique des overlays quand le wrap disparaît du DOM.",
+  "notes": "### Ajouts\n- **Bouton « 🔁 Rejouer » dans une partie terminée** — dans le header des 4 pages de jeu (générique/FiveCrowns/septcarreau, Yams, Belote, Tarot), juste après « Historique ». N'apparaît que quand la partie est finie ; clic → setup avec `from={sessionId}` pour préremplir joueurs et config. Évite d'avoir à repasser par /history pour rejouer avec les mêmes joueurs.",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.20/ScoreCounter-android-v0.2.20.apk",
-      "sha256": "fa13ec8041783d639b4c30fc8d8f3686287ac47f24c5c81b4d0e6acf9b401802",
-      "size": 49223839
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.21/ScoreCounter-android-v0.2.21.apk",
+      "sha256": "3320bcfcdd88d9c014f69791d1cb89948430d375156087b35b37e074c1dc8d78",
+      "size": 48897285
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.20/ScoreCounter-setup-v0.2.20.exe",
-      "sha256": "d4fbdfd5f167ef1ab124561778dc211a964acfb0bf2458e4632bd02a6ad35982",
-      "size": 58846886,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.21/ScoreCounter-setup-v0.2.21.exe",
+      "sha256": "a3859f524c7bcaf732db9f4bcc67a4d0eda3e69dcf7b2bdd4d8b2e54b2f36f76",
+      "size": 58859580,
       "type": "inno-setup"
     }
   }
