@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.19",
-  "buildCode": 3462415,
+  "latest": "0.2.20",
+  "buildCode": 3462469,
   "publishedAt": "2026-08-01",
-  "notes": "### Améliorations\n- **Refresh force un check de nouvelle version** — le clic sur la marque « 🎲 ScoreCounter » de la sidebar (desktop) et le pull-to-refresh (mobile) déclenchent maintenant systématiquement un check de nouvelle version, en bypassant le debounce 6h interne. Implémenté via un flag `sessionStorage` posé par `window.scReload()` et consommé par `MainLayout` au premier render, qui appelle alors `UpdateService.CheckAsync(force: true)`. Utile quand tu viens de publier une release et que tu veux vérifier immédiatement que le device la voit.",
+  "notes": "### Ajouts\n- **Entête flottante pour les tableaux de score** (`Yams`, PlaySession list view avec Five Crowns, etc.). Quand tu scrolles vers le bas et que l'entête (Case + noms + totaux) sort du viewport, un clone apparaît en `position:fixed` en haut de la zone de contenu, aligné avec le tableau sous-jacent. Suit aussi le scroll horizontal quand le tableau déborde (5+ joueurs sur écran étroit). Implémenté en JS pur car `overflow-x:auto` sur le wrap casserait `position:sticky` en CSS pur — trade-off entre scroll H et sticky V normalement incompatibles.\n\n### Interne\n- Nouveau module JS `window.scStickyHeaders` dans `wwwroot/index.html` : `MutationObserver` sur `document.body` pour capter les tableaux ajoutés au vol par Blazor, clone du `<thead>` dans un overlay hors du wrap, `requestAnimationFrame` throttling sur les scroll events, sync des largeurs de colonnes via `getBoundingClientRect`, purge automatique des overlays quand le wrap disparaît du DOM.",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.19/ScoreCounter-android-v0.2.19.apk",
-      "sha256": "597762a0ecc1cc6055329155bef65fd2f34e0c519bf74e7443a0d55da10b13ef",
-      "size": 48884997
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.20/ScoreCounter-android-v0.2.20.apk",
+      "sha256": "fa13ec8041783d639b4c30fc8d8f3686287ac47f24c5c81b4d0e6acf9b401802",
+      "size": 49223839
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.19/ScoreCounter-setup-v0.2.19.exe",
-      "sha256": "94c6fffdc03074944a4e2597a530fc2b11d6c686e76231050c061abc9e3bbe6b",
-      "size": 58845926,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.20/ScoreCounter-setup-v0.2.20.exe",
+      "sha256": "d4fbdfd5f167ef1ab124561778dc211a964acfb0bf2458e4632bd02a6ad35982",
+      "size": 58846886,
       "type": "inno-setup"
     }
   }
