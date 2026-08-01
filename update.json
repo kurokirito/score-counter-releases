@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.18",
-  "buildCode": 3462401,
+  "latest": "0.2.19",
+  "buildCode": 3462415,
   "publishedAt": "2026-08-01",
-  "notes": "### Corrections\n- **Pull-to-refresh se déclenchait en milieu de page** — le check `window.scrollY` retournait toujours 0 car ce n'est PAS le vrai conteneur scrollable (dans MainLayout, c'est `<div class=\"content\">` avec `overflow:auto`). Résultat : n'importe quel drag vers le bas déclenchait le refresh, même en plein milieu d'une longue liste. Correction : on remonte depuis `event.target` jusqu'au premier ancêtre scrollable et on lit SON `scrollTop`. Le pull-to-refresh ne s'arme que si ce conteneur est tout en haut, et se désarme si l'utilisateur scrolle pendant le geste.",
+  "notes": "### Améliorations\n- **Refresh force un check de nouvelle version** — le clic sur la marque « 🎲 ScoreCounter » de la sidebar (desktop) et le pull-to-refresh (mobile) déclenchent maintenant systématiquement un check de nouvelle version, en bypassant le debounce 6h interne. Implémenté via un flag `sessionStorage` posé par `window.scReload()` et consommé par `MainLayout` au premier render, qui appelle alors `UpdateService.CheckAsync(force: true)`. Utile quand tu viens de publier une release et que tu veux vérifier immédiatement que le device la voit.",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.18/ScoreCounter-android-v0.2.18.apk",
-      "sha256": "f1f62b396d16dabd4e8fe2aaa652296a5a148f37939bba9b45e9f58ba3a5c483",
-      "size": 49219743
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.19/ScoreCounter-android-v0.2.19.apk",
+      "sha256": "597762a0ecc1cc6055329155bef65fd2f34e0c519bf74e7443a0d55da10b13ef",
+      "size": 48884997
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.18/ScoreCounter-setup-v0.2.18.exe",
-      "sha256": "d09bb8aa6d7b1168e20addadc56364186ab3ae31076a58326e5c434ae5548fdd",
-      "size": 58869850,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.19/ScoreCounter-setup-v0.2.19.exe",
+      "sha256": "94c6fffdc03074944a4e2597a530fc2b11d6c686e76231050c061abc9e3bbe6b",
+      "size": 58845926,
       "type": "inno-setup"
     }
   }
