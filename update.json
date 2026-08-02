@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.21",
-  "buildCode": 3462488,
-  "publishedAt": "2026-08-01",
-  "notes": "### Ajouts\n- **Bouton « 🔁 Rejouer » dans une partie terminée** — dans le header des 4 pages de jeu (générique/FiveCrowns/septcarreau, Yams, Belote, Tarot), juste après « Historique ». N'apparaît que quand la partie est finie ; clic → setup avec `from={sessionId}` pour préremplir joueurs et config. Évite d'avoir à repasser par /history pour rejouer avec les mêmes joueurs.",
+  "latest": "0.2.22",
+  "buildCode": 3463897,
+  "publishedAt": "2026-08-02",
+  "notes": "### Améliorations\n- **Feuille de score Yams plus compacte** — suppression des lignes d'entête « Section haute » / « Section basse », la section haute n'affiche plus que « Total des 1 », « Total des 2 »… (le chiffre redondant est retiré), et les combinaisons à valeur fixe (Full, Petite/Grande suite, Yams) n'affichent plus le rappel des points sous leur libellé. Gain de place vertical, surtout utile sur mobile et en mode par joueur.",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.21/ScoreCounter-android-v0.2.21.apk",
-      "sha256": "3320bcfcdd88d9c014f69791d1cb89948430d375156087b35b37e074c1dc8d78",
-      "size": 48897285
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.22/ScoreCounter-android-v0.2.22.apk",
+      "sha256": "3f2e94ff7e1bad16a02e0d017c55f0be6e3665dcb92ddf265916fe439f2bbadb",
+      "size": 49232031
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.21/ScoreCounter-setup-v0.2.21.exe",
-      "sha256": "a3859f524c7bcaf732db9f4bcc67a4d0eda3e69dcf7b2bdd4d8b2e54b2f36f76",
-      "size": 58859580,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.22/ScoreCounter-setup-v0.2.22.exe",
+      "sha256": "2b09b2278344d5edebf64d50080a4ee4418bd3d968c6980b1592203b909e42cf",
+      "size": 58872773,
       "type": "inno-setup"
     }
   }
