@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.22",
-  "buildCode": 3463948,
+  "latest": "0.2.23",
+  "buildCode": 3463952,
   "publishedAt": "2026-08-02",
-  "notes": "### Améliorations\n- **Feuille de score Yams plus compacte** — suppression des lignes d'entête « Section haute » / « Section basse », la section haute n'affiche plus que « Total des 1 », « Total des 2 »… (le chiffre redondant est retiré), et les combinaisons à valeur fixe (Full, Petite/Grande suite, Yams) n'affichent plus le rappel des points sous leur libellé. Gain de place vertical, surtout utile sur mobile et en mode par joueur.",
+  "notes": "### Corrections\n- **Entête flottante figée à 0** — le clone du `<thead>` était créé une fois à l'init et ne se mettait plus à jour quand Blazor incrémentait les totaux après une saisie de score. Ajout d'un `MutationObserver` sur le `<thead>` d'origine qui resync le contenu du clone (avec cleanup propre du observer quand le wrap est détruit).",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.22/ScoreCounter-android-v0.2.22.apk",
-      "sha256": "0873741211f90aeb43ab18bcff644702aaac8d0a691432e6ee52300c33f1c156",
-      "size": 49236127
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.23/ScoreCounter-android-v0.2.23.apk",
+      "sha256": "4fa5e6510cc0e74e193328a63abc8b63f47001c81c6314ca6c193a439cdaf109",
+      "size": 48897285
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.22/ScoreCounter-setup-v0.2.22.exe",
-      "sha256": "1dac72f7601b2c47fefcf32fc0f0c169a1b71a4073a3e1ce2d53a8f88eca0816",
-      "size": 58863970,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.23/ScoreCounter-setup-v0.2.23.exe",
+      "sha256": "bbcb1d4f2295d5870472af9448ba16343f467eaefc5482b7ad35c982af6756b3",
+      "size": 58863534,
       "type": "inno-setup"
     }
   }
