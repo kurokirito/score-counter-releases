@@ -1,18 +1,18 @@
 {
   "latest": "0.2.22",
-  "buildCode": 3463897,
+  "buildCode": 3463948,
   "publishedAt": "2026-08-02",
   "notes": "### Améliorations\n- **Feuille de score Yams plus compacte** — suppression des lignes d'entête « Section haute » / « Section basse », la section haute n'affiche plus que « Total des 1 », « Total des 2 »… (le chiffre redondant est retiré), et les combinaisons à valeur fixe (Full, Petite/Grande suite, Yams) n'affichent plus le rappel des points sous leur libellé. Gain de place vertical, surtout utile sur mobile et en mode par joueur.",
   "platforms": {
     "android": {
       "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.22/ScoreCounter-android-v0.2.22.apk",
-      "sha256": "3f2e94ff7e1bad16a02e0d017c55f0be6e3665dcb92ddf265916fe439f2bbadb",
-      "size": 49232031
+      "sha256": "0873741211f90aeb43ab18bcff644702aaac8d0a691432e6ee52300c33f1c156",
+      "size": 49236127
     },
     "windows": {
       "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.22/ScoreCounter-setup-v0.2.22.exe",
-      "sha256": "2b09b2278344d5edebf64d50080a4ee4418bd3d968c6980b1592203b909e42cf",
-      "size": 58872773,
+      "sha256": "1dac72f7601b2c47fefcf32fc0f0c169a1b71a4073a3e1ce2d53a8f88eca0816",
+      "size": 58863970,
       "type": "inno-setup"
     }
   }
