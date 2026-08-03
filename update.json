@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.24",
-  "buildCode": 3465737,
+  "latest": "0.2.25",
+  "buildCode": 3465798,
   "publishedAt": "2026-08-03",
-  "notes": "### Ajouts\n- **Bonus Yams (+100)** — règle officielle Hasbro du Yahtzee bonus. Nouvelle ligne « Bonus Yams » en bas de la section basse : chaque Yams supplémentaire vaut +100, saisi via un stepper (− / +), illimité. Activable uniquement si la case Yams vaut 50 ; grisée sinon, et **croix rouge** si le Yams est rayé (0). Le total (entête, récap, classement) en tient compte. La règle du joker est documentée mais non automatisable (compteur manuel, sans dés).\n- **Règles Yams officielles Hasbro** — page de règles réécrite d'après le Game Guide Hasbro (Yahtzee Classic C00950) et ajout de la **page officielle FR en image** dans « 📄 Pages officielles ».\n- **Zoom sur les images de règles** — clic sur une page officielle pour l'agrandir en taille réelle avec déplacement (scroll/glisser, pinch sur mobile). Vaut aussi pour Five Crowns.\n\n### Améliorations\n- **Feuille Yams : ligne « Total final » retirée** — redondante avec le total déjà affiché dans l'entête (et l'entête flottante).\n\n### Corrections\n- **Règles : départage d'égalité inventé** — l'ancienne page décrivait un départage inexistant chez Hasbro ; corrigé (Hasbro n'en prévoit aucun).",
+  "notes": "### Améliorations\n- **Zoom des images de règles au geste** — en plus des boutons −/+ et du slider (100–500 %), on peut désormais zoomer directement sur l'image au **pincement touchpad / Ctrl+molette** (Windows) et au **pincement 2 doigts** (mobile), avec déplacement dans l'image. Le zoom reste **limité à l'image** : le zoom global de l'app (activé par défaut par WebView2 sous Windows) a été désactivé pour éviter de zoomer toute l'interface par erreur.",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.24/ScoreCounter-android-v0.2.24.apk",
-      "sha256": "9f8b9194c53cd0f12db41dd4459f5423fd3001c897d1ae7f7311a0b6af7930ed",
-      "size": 50981110
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.25/ScoreCounter-android-v0.2.25.apk",
+      "sha256": "186a49c3fc1e3aa61a6cadc0678e222ad9427f747d74e2c7a8f3be9218b79033",
+      "size": 50654556
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.24/ScoreCounter-setup-v0.2.24.exe",
-      "sha256": "6d7371e231b5837196d9aba554bedf878095e9c596ca972b3a45c670145a3681",
-      "size": 60340361,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.25/ScoreCounter-setup-v0.2.25.exe",
+      "sha256": "59e96c62d36717723027eb9871b18df3a57646f4b5ee7470086d8f8490babd0b",
+      "size": 60334967,
       "type": "inno-setup"
     }
   }
