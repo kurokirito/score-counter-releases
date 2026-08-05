@@ -1,18 +1,18 @@
 {
-  "latest": "0.2.25",
-  "buildCode": 3465798,
-  "publishedAt": "2026-08-03",
-  "notes": "### Améliorations\n- **Zoom des images de règles au geste** — en plus des boutons −/+ et du slider (100–500 %), on peut désormais zoomer directement sur l'image au **pincement touchpad / Ctrl+molette** (Windows) et au **pincement 2 doigts** (mobile), avec déplacement dans l'image. Le zoom reste **limité à l'image** : le zoom global de l'app (activé par défaut par WebView2 sous Windows) a été désactivé pour éviter de zoomer toute l'interface par erreur.",
+  "latest": "0.2.26",
+  "buildCode": 3468558,
+  "publishedAt": "2026-08-05",
+  "notes": "### Corrections\n- **Yams — « Rejouer » ne reprenait pas tous les joueurs** — la page de setup Yams ignorait le paramètre `from` et ne présélectionnait que l'utilisateur courant. Elle reprend maintenant **tous les joueurs** de la partie source, dans leur ordre.\n\n### Améliorations\n- **Yams — lignes bonus mises en valeur** — les lignes « Bonus (+35) » et « Bonus Yams » ont un fond doré, des bordures haut/bas et un liseré à gauche pour les distinguer clairement des lignes de catégories.",
   "platforms": {
     "android": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.25/ScoreCounter-android-v0.2.25.apk",
-      "sha256": "186a49c3fc1e3aa61a6cadc0678e222ad9427f747d74e2c7a8f3be9218b79033",
-      "size": 50654556
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.26/ScoreCounter-android-v0.2.26.apk",
+      "sha256": "1633405774c525f580f853fddd51d040cc477ac8be6b7906cf445278861c01fe",
+      "size": 50993398
     },
     "windows": {
-      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.25/ScoreCounter-setup-v0.2.25.exe",
-      "sha256": "59e96c62d36717723027eb9871b18df3a57646f4b5ee7470086d8f8490babd0b",
-      "size": 60334967,
+      "url": "https://github.com/kurokirito/score-counter-releases/releases/download/v0.2.26/ScoreCounter-setup-v0.2.26.exe",
+      "sha256": "59cc90627c368491bccdc85cb1ef85f6295447ff7bb25f4d92071a5434ed221e",
+      "size": 60349184,
       "type": "inno-setup"
     }
   }
